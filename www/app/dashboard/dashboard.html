@@ -1,0 +1,20 @@
+<ion-view title="Dashboard">
+    <ion-content class="padding">
+        <div class="button-bar">
+            <Button class="button button-small" ng-class="dash.activeButton == 1 ? 'button-positive' : ''" ng-click='dash.onDayClick()'>Day</Button>
+            <Button class="button button-small" ng-class="dash.activeButton == 2 ? 'button-positive' : ''" ng-click='dash.onWeekClick()'>Week</Button>
+            <Button class="button button-small" ng-class="dash.activeButton == 3 ? 'button-positive' : ''" ng-click='dash.onMonthClick()'>Month</Button>
+            <Button class="button button-small" ng-class="dash.activeButton == 4 ? 'button-positive' : ''" ng-click='dash.onYearClick()'>Year</Button>
+        </div>
+        <div>
+             <div data-ac-chart="'area'" data-ac-data="dash.data" 
+                  data-ac-config="dash.moves.config" class="chart"></div>
+            <br />
+            <div data-ac-chart="'line'" data-ac-data="dash.data" 
+                  data-ac-config="dash.stacks.config" class="chart"></div>
+            <br />
+            <div data-ac-chart="'bar'" data-ac-data="dash.data" 
+                  data-ac-config="dash.freezers.config" class="chart"></div>
+        </div>
+    </ion-content>
+</ion-view>
