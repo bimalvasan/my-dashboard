@@ -7,6 +7,7 @@
 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="lib/nvd3/build/nv.d3.min.css" rel="stylesheet">
 
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
@@ -34,13 +35,16 @@
 
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
-    <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
-    <script src="lib/charts/angular-charts.js"></script>
+    <script src="lib/d3/d3.min.js"></script>
+    <script src="lib/nvd3/build/nv.d3.min.js"></script>
+    <script src="lib/angular-nvd3/dist/angular-nvd3.min.js"></script>
+      
     <!-- app's js -->
     <script src="app/app.js"></script>
     <script src="js/controllers.js"></script>
     <script src="js/services.js"></script>
     <script src="app/dashboard/dashboard.controller.js"></script>
+    <script src="app/dashboard/dashboard.services.js"></script>
     <script src="app/segment/segment.controller.js"></script>
     <script src="app/segment/movetypes.controller.js"></script>
     <script src="app/share/share.controller.js"></script>

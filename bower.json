@@ -2,6 +2,7 @@
   "name": "HelloIonic",
   "private": "true",
   "devDependencies": {
+    "angular-nvd3": "~1.0.1",
     "ionic": "driftyco/ionic-bower#1.1.0"
   }
 }

@@ -7,14 +7,8 @@
             <Button class="button button-small" ng-class="dash.activeButton == 4 ? 'button-positive' : ''" ng-click='dash.onYearClick()'>Year</Button>
         </div>
         <div>
-             <div data-ac-chart="'area'" data-ac-data="dash.data" 
-                  data-ac-config="dash.moves.config" class="chart"></div>
-            <br />
-            <div data-ac-chart="'line'" data-ac-data="dash.data" 
-                  data-ac-config="dash.stacks.config" class="chart"></div>
-            <br />
-            <div data-ac-chart="'bar'" data-ac-data="dash.data" 
-                  data-ac-config="dash.freezers.config" class="chart"></div>
-        </div>
+            <nvd3 options="dash.moves.options" data="dash.moves.data"></nvd3>
+            <nvd3 options="dash.stacks.options" data="dash.stacks.data"></nvd3>
+            <nvd3 options="dash.freezers.options" data="dash.freezers.data"></nvd3>
     </ion-content>
 </ion-view>
