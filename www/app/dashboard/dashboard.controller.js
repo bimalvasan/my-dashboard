@@ -47,7 +47,7 @@
                         xAxis: {
                             showMaxMin: false,
                             tickFormat: function (d) {
-                                return d3.time.format('%I %p')(new Date(d))
+                                return d3.time.format('%H %p')(new Date(d))
                             }
                         },
                         showYAxis: false

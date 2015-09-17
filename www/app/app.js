@@ -60,6 +60,14 @@ function config($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 }
             }
         })
+        .state('tab.segment.market', {
+            url: '/market',
+            views: {
+                'tab-segment': {
+                    templateUrl: 'app/segment/market.html'
+                }
+            }
+        })
         .state('tab.segment.movetypes', {
             url: '/movetypes',
             views: {
