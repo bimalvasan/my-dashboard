@@ -1,9 +1,9 @@
-(function(){
+(function () {
     'use strict';
     angular.module('main').controller('MarketCtrl', MarketCtrl);
-    
-    function MarketCtrl(){
+
+    function MarketCtrl() {
         var mkt = this;
-        mkt.markets = ['USA','UK','Mexico','Canada'];
+        mkt.markets = ['USA', 'UK', 'Mexico', 'Canada'];
     };
 })();

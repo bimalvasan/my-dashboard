@@ -143,6 +143,7 @@
         }
 
         function onDayClick() {
+            dash.activeButton = 1;
             dash.moves.data = dashboardSvc.getMoves('daily');
             dash.stacks.data = dashboardSvc.getStacks('daily');
             dash.freezers.data = dashboardSvc.getFreezers('daily');

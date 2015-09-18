@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('main', ['ionic', 'main.controllers', 'dashboard.Service', 'nvd3'])
+angular.module('main', ['ionic', 'main.controllers', 'dashboard.Service', 'nvd3', 'angular-cache'])
 
 .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
@@ -25,11 +25,14 @@ angular.module('main', ['ionic', 'main.controllers', 'dashboard.Service', 'nvd3'
 
 .config(config);
 
-config.$inject = ['$stateProvider', '$urlRouterProvider', '$ionicConfigProvider'];
+config.$inject = ['$stateProvider', '$urlRouterProvider', '$ionicConfigProvider', 'CacheFactoryProvider'];
 
-function config($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+function config($stateProvider, $urlRouterProvider, $ionicConfigProvider, CacheFactoryProvider) {
 
     $ionicConfigProvider.tabs.position('bottom');
+    
+    angular.extend(CacheFactoryProvider.defaults, { maxAge: 15 * 60 * 1000 });
+    
     // Ionic uses AngularUI Router which uses the concept of states
     // Learn more here: https://github.com/angular-ui/ui-router
     // Set up the various states which the app can be in.
@@ -60,15 +63,16 @@ function config($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 }
             }
         })
-        .state('tab.segment.market', {
+        .state('tab.market', {
             url: '/market',
             views: {
                 'tab-segment': {
-                    templateUrl: 'app/segment/market.html'
+                    templateUrl: 'app/segment/market.html',
+                    controller: 'MarketCtrl as mc'
                 }
             }
         })
-        .state('tab.segment.movetypes', {
+        .state('tab.movetypes', {
             url: '/movetypes',
             views: {
                 'tab-segment': {
@@ -86,7 +90,7 @@ function config($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 }
             }
         })
-      .state('tab.more', {
+        .state('tab.more', {
         url: '/more',
         views: {
             'tab-more': {
