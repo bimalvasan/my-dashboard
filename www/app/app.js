@@ -72,6 +72,24 @@ function config($stateProvider, $urlRouterProvider, $ionicConfigProvider, CacheF
                 }
             }
         })
+        .state('tab.perf', {
+            url: '/perf',
+            views: {
+                'tab-segment': {
+                    templateUrl: 'app/segment/performance.html',
+                    controller: 'PerformanceCtrl as pc'
+                }
+            }
+        })
+        .state('tab.prod', {
+            url: '/prod',
+            views: {
+                'tab-segment': {
+                    templateUrl: 'app/segment/productivity.html',
+                    controller: 'ProductivityCtrl as vm'
+                }
+            }
+        })
         .state('tab.movetypes', {
             url: '/movetypes',
             views: {

@@ -1,0 +1,5 @@
+{
+    "jscodehints.detectedExclusions": [
+        "dist/angular-cache.js"
+    ]
+}

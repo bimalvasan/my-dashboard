@@ -46,9 +46,9 @@
                         useInteractiveGuideline: true,
                         xAxis: {
                             showMaxMin: false,
-                            tickFormat: function (d) {
-                                return d3.time.format('%H %p')(new Date(d))
-                            }
+//                            tickFormat: function (d) {
+//                                return d3.time.format('%H')(new Date(d))
+//                            }
                         },
                         showYAxis: false
                     },

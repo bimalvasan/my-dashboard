@@ -2,8 +2,8 @@
     <ion-content class="padding">
          <div class="list">
             <div ng-repeat='segment in sgmt.segments'>                
-                <a class="item item-icon-right">
-                    {{segment}}
+                <a class="item item-icon-right" ui-sref='{{segment.value}}'>
+                    {{segment.key}}
                     <i class="icon ion-chevron-right icon-accessory"></i>
                 </a>
             </div>
