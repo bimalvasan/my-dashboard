@@ -1,1 +1,47 @@
 /* Empty. Add your own CSS if you like */
+
+.rcornersDB {
+    border-radius: 5px 5px 0px 0px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #bfbfbf;
+    background: #2b93e8;
+    padding: 5px; 
+    width: auto;
+    height: 140px; 
+    margin: 20px 0px 0px 0px;
+}
+
+.rcornersBB {
+    border-radius: 120px;
+}
+.menubackTop{ 
+    background-color:#f7f7f5;
+    width:auto;
+    height:60px;
+    border-bottom: 1px;
+    border-bottom-color: #b2b2b2;
+    overflow: hidden;
+}
+.menuButton{
+    height: 42px;
+    margin-top: 4px;
+}
+.flagTitle{
+    height: 29px;
+    width: 38px;
+    vertical-align: middle;
+}
+
+.configGrad {
+  background: -webkit-linear-gradient(#eeeeee, #dadada); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#eeeeee, #dadada); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#eeeeee, #dadada); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#eeeeee, #dadada); /* Standard syntax */
+  border-radius: 0px 0px 5px 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #bfbfbf;
+  height: 33px;
+  padding: 5px;
+}

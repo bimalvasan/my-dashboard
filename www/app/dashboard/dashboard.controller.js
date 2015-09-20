@@ -20,10 +20,10 @@
 
             var chart = {
                 margin: {
-                    top: 20,
-                    right: 20,
-                    bottom: 20,
-                    left: 10
+                    top: 5,
+                    right: 5,
+                    bottom: 5,
+                    left: 5
                 }
             };
 
@@ -31,7 +31,7 @@
                 options: {
                     chart: {
                         type: 'stackedAreaChart',
-                        height: 170,
+                        height: 100,
                         margin: chart.margin,
                         x: function (d) {
                             return d[0];
@@ -67,7 +67,7 @@
                 options: {
                     chart: {
                         type: 'lineChart',
-                        height: 170,
+                        height: 100,
                         margin: chart.margin,
                         x: function (d) {
                             return d.x;
@@ -113,7 +113,7 @@
                 options: {
                     chart: {
                         type: 'discreteBarChart',
-                        height: 170,
+                        height: 100,
                         margin: chart.margin,
                         x: function (d) {
                             return d.label;
