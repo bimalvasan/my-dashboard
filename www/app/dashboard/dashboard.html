@@ -1,14 +1,25 @@
-<ion-view title="Dashboard">
-    <ion-content class="padding">
-        <div class="button-bar">
+<ion-view>
+<ion-nav-title>
+<img  class="flagTitle" src="../img/Flag_US.png">
+    DC6084D
+</ion-nav-title>
+    
+<ion-header-bar class="bar bar-subheader menubackTop">
+    <div class="button-bar menuButton">
             <Button class="button button-small" ng-class="dash.activeButton == 1 ? 'button-positive' : ''" ng-click='dash.onDayClick()'>Day</Button>
             <Button class="button button-small" ng-class="dash.activeButton == 2 ? 'button-positive' : ''" ng-click='dash.onWeekClick()'>Week</Button>
             <Button class="button button-small" ng-class="dash.activeButton == 3 ? 'button-positive' : ''" ng-click='dash.onMonthClick()'>Month</Button>
             <Button class="button button-small" ng-class="dash.activeButton == 4 ? 'button-positive' : ''" ng-click='dash.onYearClick()'>Year</Button>
-        </div>
-        <div>
-            <nvd3 options="dash.moves.options" data="dash.moves.data" color='dash.myColor()'></nvd3>
-            <nvd3 options="dash.stacks.options" data="dash.stacks.data"></nvd3>
-            <nvd3 options="dash.freezers.options" data="dash.freezers.data"></nvd3>
+       </div>
+    </ion-header-bar>
+    <ion-content class="padding">
+      
+    
+            <div class="rcornersDB"><nvd3 options="dash.moves.options" data="dash.moves.data"></nvd3></div>
+            <div class="configGrad"></div>
+            <div class="rcornersDB"><nvd3 options="dash.stacks.options" data="dash.stacks.data"></nvd3></div>
+            <div class="configGrad"></div>    
+            <div class="rcornersDB"><nvd3 options="dash.freezers.options" data="dash.freezers.data"></nvd3></div>
+            <div class="configGrad"></div>
     </ion-content>
 </ion-view>
