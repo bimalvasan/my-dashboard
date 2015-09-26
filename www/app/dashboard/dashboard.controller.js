@@ -27,6 +27,14 @@
                 }
             };
 
+            var colorArray = ['#FF0000', '#0000FF', '#FFFF00', '#00FFFF'];
+
+            dash.myColor = function () {
+                return function (d, i) {
+                    return colorArray[i];
+                };
+            };
+
             dash.moves = {
                 options: {
                     chart: {
@@ -46,9 +54,9 @@
                         useInteractiveGuideline: true,
                         xAxis: {
                             showMaxMin: false,
-//                            tickFormat: function (d) {
-//                                return d3.time.format('%H')(new Date(d))
-//                            }
+                            //                            tickFormat: function (d) {
+                            //                                return d3.time.format('%H')(new Date(d))
+                            //                            }
                         },
                         showYAxis: false
                     },

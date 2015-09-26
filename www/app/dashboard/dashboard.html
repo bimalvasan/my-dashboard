@@ -7,7 +7,7 @@
             <Button class="button button-small" ng-class="dash.activeButton == 4 ? 'button-positive' : ''" ng-click='dash.onYearClick()'>Year</Button>
         </div>
         <div>
-            <nvd3 options="dash.moves.options" data="dash.moves.data"></nvd3>
+            <nvd3 options="dash.moves.options" data="dash.moves.data" color='dash.myColor()'></nvd3>
             <nvd3 options="dash.stacks.options" data="dash.stacks.data"></nvd3>
             <nvd3 options="dash.freezers.options" data="dash.freezers.data"></nvd3>
     </ion-content>

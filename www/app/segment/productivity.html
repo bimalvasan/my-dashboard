@@ -11,69 +11,38 @@
                 </select>
             </label>
         </div>
-        <div>
-            <nvd3 options="vm.options" data="vm.data.us"></nvd3>
-            <nvd3 options="vm.options" data="vm.data.uk"></nvd3>
-            <nvd3 options="vm.options" data="vm.data.ca"></nvd3>
+        <div ng-switch='selectedGraph'>            
+            <div ng-switch-when='area'>
+                
+            </div>
+            <div ng-switch-when='line'>
+                
+            </div>
+            <div ng-switch-when='bar'>
+                
+            </div>
+            <div ng-switch-default>
+                <nvd3 options="vm.options.us" data="vm.data.us"></nvd3>
+                <nvd3 options="vm.options.uk" data="vm.data.uk"></nvd3>
+                <nvd3 options="vm.options.ca" data="vm.data.ca"></nvd3>
+            </div>
         </div>
         <div class="card">
             <div class="item item-divider">
                 SELECT GRAPH
             </div>
-            <ul class="list">
-                <li class="item item-toggle">
-                    Area Chart
-                    <label class="toggle toggle-balanced">
-                        <input type="checkbox">
-                        <div class="track">
-                            <div class="handle"></div>
-                        </div>
-                    </label>
-                </li>
-                <li class="item item-toggle">
-                    Line Chart
-                    <label class="toggle toggle-balanced">
-                        <input type="checkbox">
-                        <div class="track">
-                            <div class="handle"></div>
-                        </div>
-                    </label>
-                </li>
-                 <li class="item item-toggle">
-                    Bar Chart
-                    <label class="toggle toggle-balanced">
-                        <input type="checkbox">
-                        <div class="track">
-                            <div class="handle"></div>
-                        </div>
-                    </label>
-                </li>
-                 <li class="item item-toggle">
-                    Pie Chart
-                    <label class="toggle toggle-balanced">
-                        <input type="checkbox">
-                        <div class="track">
-                            <div class="handle"></div>
-                        </div>
-                    </label>
-                </li>
-            </ul>
+            <ion-toggle ng-repeat="item in vm.settingsList"
+                        ng-model="item.checked" 
+                        ng-checked="item.checked"
+                        ng-change="vm.selectedGraphChange()">
+                {{ item.text }}
+            </ion-toggle>
         </div>
         <div class="card">
             <div class="item item-divider">
                 DASHBOARD SETTINGS
             </div>
-            <ul class="list">
-                <li class="item item-toggle">
-                    Show on dashboard
-                    <label class="toggle toggle-balanced">
-                        <input type="checkbox">
-                        <div class="track">
-                            <div class="handle"></div>
-                        </div>
-                    </label>
-                </li>
-            </ul>
+            <ion-toggle ng-model="show" toggle-class="toggle-balanced">Show on dashboard</ion-toggle>
         </div>
     </ion-content>
 </ion-view>
