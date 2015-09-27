@@ -1,5 +1,23 @@
-<ion-view title="Add Segment">
+<ion-view title="Move Types">
+    <ion-header-bar class="bar bar-subheader item-input-inset">
+        <label class="item-input-wrapper">
+            <i class="icon ion-ios-search placeholder-icon"></i>
+            <input type="search" placeholder="Search" ng-model="move.moveType">
+        </label>
+        <button class="button button-icon ion-android-close input-button" 
+                ng-if="move.moveType.length" ng-click="move.clearSearch()">            
+        </button>
+    </ion-header-bar>
     <ion-content class="padding">
-         <h3>Move types</h3>
+        <div class="list">
+            <div ng-repeat='typ in  move.types | filter:move.moveType'>
+                <a class="item item-icon-right">
+                    {{typ.key}}
+                    <i class="icon ion-chevron-right icon-accessory"></i>
+                </a>
+            </div>
+        </div>
+        <div>
+        </div>
     </ion-content>
 </ion-view>
