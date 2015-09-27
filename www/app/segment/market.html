@@ -1,11 +1,18 @@
-<ion-view>
+<ion-view title='Markets'>
+    <ion-header-bar class='bar bar-subheader item-input-inset'>
+        <label class='item-input-wrapper'>
+            <i class='icon ion-ios-search placeholder-icon'></i>
+            <input type='search' placeholder='Search' ng-model='market.selected'>
+        </label>
+        <button class="button button-icon ion-android-close input-button" ng-if="move.moveType.length" ng-click="move.clearSearch()">
+        </button>
+    </ion-header-bar>
     <ion-content class='has-header'>
-        <div class="list">
-            <h1>Market</h1>
-            <div ng-repeat='market in mc.markets'>
-                <div class="item item-divider item-energized">
-                    {{market}}
-                </div>
+        <div class='list'>
+            <div ng-repeat='market in mc.markets | filter:market.selected'>
+                <a class="item item-icon-right">
+                    <img ng-src='{{market.icon}}'>{{market.key}}
+                </a>
             </div>
         </div>
     </ion-content>
